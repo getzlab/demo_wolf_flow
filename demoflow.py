@@ -46,7 +46,7 @@ def readfile_and_prefixstr(path, prefix=""):
 @WolfFlow(storage=FLOW_STORAGE)
 def DemoFlow(flow_inputA, flow_inputB="default_inputB"):
     ta = TaskA(input_a = flow_inputA)
-    tb = TaskB(input_b1 = readfile_and_prefixstr(t1["output_a"], "myprefix_"), input_b2 = flow_inputB)
+    tb = TaskB(input_b1 = readfile_and_prefixstr(ta["output_a"], "myprefix_"), input_b2 = flow_inputB)
     return
 
 if __name__ == "__main__":
