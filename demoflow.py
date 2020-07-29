@@ -6,7 +6,6 @@ from prefect.environments.storage.github import GitHub
 FLOW_STORAGE = GitHub(
     "getzlab/demo_wolf_flow",
     path="demoflow.py",
-    labels=["example-flow-label"],
     result=prefect.engine.results.LocalResult()
 )
 ################################################
